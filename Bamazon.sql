@@ -34,3 +34,26 @@ VALUES  ('Dove Shampoo', 'Cosmetics', 5.75, 500),
 		('Ibuprophen', 'Pharmacy', 4.95, 389),
 		('Band Aid', 'Pharmacy', 3.25, 550),
 		('Ben & Jerry Ice Cream', 'Grocery', 3.25, 432);
+
+------------------------------------------------------------------------------
+-- create department table --
+USE bamazon;	
+
+CREATE TABLE Departments(
+    DepartmentID MEDIUMINT AUTO_INCREMENT NOT NULL,
+    DepartmentName VARCHAR(50) NOT NULL,
+    OverHeadCosts DECIMAL(10,2) NOT NULL,
+    TotalSales DECIMAL(10,2) NOT NULL,
+    PRIMARY KEY(DepartmentID));
+
+-- insert data into the ' departments ' table --
+INSERT INTO Departments(DepartmentName, OverHeadCosts, TotalSales)
+VALUES ('ENTERTAINMENT', 50000.00, 15000.00),
+    ('Cosmetics', 20000.00, 12000.00),
+    ('Produce', 30000.00, 15000.00),
+    ('Children', 3000.00, 12000.00),
+    ('Grocery', 1200.00, 15000.00),
+    ('Pets', 40000.00, 12000.00),
+    ('Clothing', 35000.00, 15000.00),
+    ('Sports', 12000.00, 12000.00),
+    ('Pharmacy', 14000.00, 20000.00);
